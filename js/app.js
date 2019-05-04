@@ -1,9 +1,9 @@
+// global variables =-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 const qwerty = document.getElementById("qwerty");
 const phrase = document.getElementById("phrase");
 let winner = 0;
 let correctTries = 0;
 let incorrectTries = 0;
-let missed = 0;
 let rnd_phrase = "";
 
 // These are the TEST phrases for the game
@@ -114,7 +114,6 @@ function reset() {
    winner = 0;
    correctTries = 0;
    incorrectTries = 0;
-   missed = 0;
    rnd_phrase = "";
 
    //    reset the puzzle
@@ -123,13 +122,13 @@ function reset() {
 
    //    reenable the keyboard
    let keyboard = document.getElementsByTagName("button");
-   for (i = 0; i < keyboard.length; i++) {
+   for (let i = 0; i < keyboard.length; i++) {
       keyboard[i].disabled = false;
    }
 
    //    reset the hearts
    let hearts = document.getElementsByTagName("img");
-   for (i = 0; i < 5; i++) {
+   for (let i = 0; i < 5; i++) {
       hearts[i].setAttribute("src", "images/liveHeart.png");
    }
 
